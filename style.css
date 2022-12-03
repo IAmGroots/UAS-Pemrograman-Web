@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --theme: #181818;
+  --theme2: #f8f8f8;
+  --text-color: #ffffff;
+  --main-color: #10dddd;
+  --secondary-color: #212121;
+  --nav-bar: rgba(255, 255, 255, 0.2);
+  --blur-text: rgba(255, 255, 255, 0.2);
+  --overlay-hover: rgba(255, 255, 255, 0.5);
+}
+
+.light-theme {
+  --theme: #eeeeee;
+  --theme2: #181818;
+  --text-color: #000000;
+  --main-color: #10dddd;
+  --nav-bar: rgba(0, 0, 0, 0.15);
+  --blur-text: rgba(0, 0, 0, 0.15);
+  --overlay-hover: rgba(0, 0, 0, 0.75);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  background: var(--theme);
+  color: var(--text-color);
+}
+
+/* border container penting untuk sementara */
+.container-banner {
+  width: 90%;
+  height: 100vh;
+  /* border: 1px solid red; */
+  padding: 75px 0;
+}
+
+.container {
+  width: 90%;
+  height: auto;
+  /* border: 1px solid red; */
+  padding: 75px 0;
+}
+
+/* Navigation Start */
+header {
+  width: 100%;
+  z-index: 2;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background: var(--nav-bar);
+  backdrop-filter: blur(7px);
+  border-bottom: 2px solid var(--nav-bar);
+}
+
+.logo {
+  padding: 5px 0;
+}
+
+.logo a {
+  color: var(--main-color);
+  padding: 10px 0;
+  font-size: 30px;
+  margin-left: 72px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 72px;
+}
+
+.links {
+  margin-left: 25px;
+}
+
+.links a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--theme2);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--main-color);
+}
+
+.links a:hover {
+  color: var(--theme);
+  background: var(--theme2);
+}
+
+.hover-none a {
+  color: var(--theme2);
+  background: transparent;
+}
+
+.hover-none a:hover {
+  color: var(--theme2);
+  background: var(--nav-bar);
+}
+/* Navigation End */
+
+/* Mode Start */
+.mode {
+  display: flex;
+  align-items: center;
+}
+
+.mode p {
+  color: var(--theme2);
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.mode img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 52px;
+  height: 26px;
+  appearance: none;
+  background: #eeeeee;
+  border-radius: 15px;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background: var(--theme2);
+}
+
+input[type="checkbox"]::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: var(--theme);
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: ease 0.5s;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(25px);
+}
+/* Mode End */
+
+/* Search Start */
+.searchBox {
+  display: flex;
+  width: 90%;
+  margin: 25px auto 25px auto;
+  /* justify-content: space-between; */
+}
+
+.searchBox a {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  width: 100%;
+}
+
+.search input[type="text"] {
+  font-size: 18px;
+  width: 100%;
+  height: 41px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.btn-search {
+  cursor: pointer;
+  width: 41px;
+  height: 41px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 8px;
+  transition: all 0.5s;
+}
+
+.btn-search:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.back {
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 7px 10px;
+  margin-right: 7px;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  /* border: 1px solid blue; */
+  /* margin: auto 0; */
+}
+
+.back:hover {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+/* Search End */
+
+/* Banner Start */
+.banner::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  background-image: url(images/banner.jpg);
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.85;
+  z-index: 0;
+}
+/* Banner End */
+
+/* Page Home Start */
+.judul {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  font-size: 48px;
+  font-weight: 800;
+  color: #f8f8f8;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.main-teks {
+  position: relative;
+  z-index: 1;
+  width: 61.5%;
+  width: 73%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(7px);
+  text-align: justify;
+  padding: 25px;
+  color: #f8f8f8;
+  font-weight: 500;
+  text-indent: 25px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.teks {
+  display: none;
+}
+
+.btn-more {
+  position: relative;
+  z-index: 1;
+  width: 12%;
+  color: #f8f8f8;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(7px);
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s;
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-more p {
+  padding: 8px 4px 8px 8px;
+  transition: all 0.5s;
+}
+
+.btn-more p:hover {
+  transform: translateX(5px);
+  padding-right: 12px;
+}
+
+.btn-more:hover {
+  width: 13%;
+}
+/* Page Home End */
+
+/* Page Games Start */
+.listGames {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.boxCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.card {
+	position: relative;
+	width: 16%;
+  height: 220px;
+  margin: 15px;
+  transition: all 0.5s;
+}
+
+.card img{
+  border-radius: 20px;
+	display: block;
+	width: 100%;
+}
+
+.card .overlay {
+  position: absolute;
+	top: 0;
+	left: 0;
+  bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.5s;
+  border: 2px solid transparent;
+}
+
+.card .overlayBg {
+  backdrop-filter: blur(3px);
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.card .overlay>* {
+	transform: translateY(30px);
+	transition: transform 0.5s;
+}
+
+.card .overlay:hover {
+	opacity: 1;
+  border: 2px solid var(--overlay-hover);
+}
+
+.card:hover {
+  transform: scale(1.025);
+}
+
+.card .overlay:hover>* {
+	transform: translateY(0);
+}
+
+.card .tittle {
+  text-align: center;
+	font-size: 18px;
+	font-weight: 700;
+  padding: 10px;
+}
+
+.card .desc {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .desc span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card .desc a {
+	font-size: 16px;
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card .desc a:hover {
+  color: #ffffff;
+}
+/* Page Games End */
+
+/* About n Form Page Start */
+.aboutMe-form {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 75px;
+}
+
+.biodata {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.biodata img {
+  width: 40%;
+  /* margin-left: 30%; */
+  /* margin-top: 40px; */
+  border-radius: 50px;
+}
+
+.biodata p {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+
+form {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxForm {
+  width: 100%;
+  height: 100%;
+  padding: 5% 15% 5% 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.boxForm h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--main-color);
+  background: var(--overlay-hover);
+  padding: 5px 0;
+  border-radius: 15px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.inputBox label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: 0.1rem;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+.inputBox input {
+  position: relative;
+  width: 100%;
+  background: var(--nav-bar);
+  border-radius: 15px;
+  padding-left: 15px;
+  border: none;
+  outline: none;
+  color: var(--theme2);
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.boxForm input[type="submit"] {
+  margin-top: 10px;
+  font-size: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 5px 0;
+  font-weight: 600;
+  border: 1px solid transparent;
+  background: var(--nav-bar);
+  color: var(--theme2);
+}
+
+.boxForm input[type="submit"]:hover {
+  background: var(--theme);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+::placeholder {
+  color: #909090;
+}
+/* About n Form Page End */
+
+/* Footer Start */
+footer {
+  width: 100%;
+  background: var(--nav-bar);
+  padding: 15px 0;
+}
+
+footer .sosmed {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+footer .sosmed a {
+  display: inline-block;
+  font-size: 32px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0 8px;
+  margin-left: 10px;
+  color: var(--theme2);
+}
+
+footer .sosmed a:hover {
+  background: var(--blur-text);
+}
+
+footer .list {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+footer .list .listLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .listLink a {
+  text-decoration: none;
+  color: var(--theme2);
+  padding: 3px 15px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+footer .listLink a:hover {
+  background: var(--blur-text);
+}
+
+footer p {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--theme2);
+  padding-bottom: 10px;
+}
+/* Footer End */
+
+@media only screen and (min-width: 1920px){
+  .logo a {
+    margin-left: 96px;
+    font-size: 48px;
+  }
+
+  .nav-link {
+    margin-right: 96px;
+  }
+  
+  .links a {
+    font-size: 28px;
+  }
+  
+  .judul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 72px;
+  }
+  
+  .main-teks {
+    font-size: 28px;
+  }
+  
+  .btn-more {
+    width: 15%;
+    margin-top: 20px;
+    font-size: 32px;
+  }
+  
+  .btn-more:hover {
+    width: 16%;
+  }
+
+  .listGames {
+    font-size: 32px;
+    margin-top: 60px;
+  }
+  
+  .card {
+    position: relative;
+    width: 16%;
+    height: 313px;
+    margin: 33px;
+    transition: all 0.5s;
+  }
+  
+  .card .tittle {
+    font-size: 24px;
+  }
+  
+  .card .desc {
+    margin-top: 15px;
+  }
+  
+  .card .desc span {
+    font-size: 18px;
+  }
+  
+  .card .desc a {
+    font-size: 20px;
+  }
+
+  .mode {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mode p {
+    color: var(--theme2);
+    font-size: 28px;
+    margin-right: 15px;
+  }
+  
+  .mode img {
+    width: 40px;
+    margin-right: 15px;
+  }
+  
+  input[type="checkbox"] {
+    width: 64px;
+    height: 32px;
+  }
+  
+  input[type="checkbox"]::before {
+    width: 26px;
+    height: 26px;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: translateX(31px);
+  }
+
+  .aboutMe-form {
+    margin-top: 100px;
+    align-items: center;
+  }
+
+  .biodata {
+    height: 130%;
+  }
+
+  .biodata p {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .boxForm {
+    height: 130%;
+  }
+
+  .boxForm h3 {
+    font-size: 28px;
+    padding: 8px 0;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+
+  .inputBox {
+    margin-bottom: 30px;
+  }
+
+  .inputBox label {
+    padding-left: 25px;
+    font-size: 24px;
+  }
+
+  .inputBox input {
+    font-size: 16px;
+    line-height: 48px;
+  }
+
+  .boxForm input[type="submit"] {
+    font-size: 28px;
+    border-radius: 20px;
+    padding: 8px 0;
+  }
+
+  footer .sosmed a {
+    font-size: 40px;
+  }
+
+  footer .listLink a {
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+  footer p {
+    font-size: 24px;
+  }
+}

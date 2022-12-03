@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navigation Start */
+header {
+  width: 100%;
+  z-index: 2;
+}
+
+/* body { */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+/* } */
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(7px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+  padding: 5px 0;
+}
+
+.logo a {
+  color: #10dddd;
+  padding: 10px 0;
+  font-size: 30px;
+  margin-left: 72px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 72px;
+}
+
+.links {
+  margin-left: 25px;
+}
+
+.links a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #f8f8f8;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #10dddd;
+}
+
+.links a:hover {
+  color: #181818;
+  background: #f8f8f8;
+}
+
+.hover-none a {
+  color: #f8f8f8;
+  background: transparent;
+}
+
+.hover-none a:hover {
+  color: #f8f8f8;
+  background: rgba(255, 255, 255, 0.2);
+}
+/* Navigation End */
+
+/* Mode Start */
+.mode {
+  display: flex;
+  align-items: center;
+}
+
+.mode p {
+  color: #f8f8f8;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.mode img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 52px;
+  height: 26px;
+  appearance: none;
+  background: #eeeeee;
+  border-radius: 15px;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background: #f8f8f8;
+}
+
+input[type="checkbox"]::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #181818;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: ease 0.5s;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(25px);
+}
+/* Mode End */
+
+.bg {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(50, 100, 200);
+  background-repeat: none;
+  background-position: 20% 20%;
+}
+
+.container {
+  width: 90%;
+  height: auto;
+  padding: 20px 0;
+  padding-top: 72px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.head h2 {
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+}
+
+.searchBox {
+  display: flex;
+}
+
+.searchBox a {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+}
+
+.search input[type="text"] {
+  font-size: 18px;
+  width: 410px;
+  height: 41px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.btn-search {
+  cursor: pointer;
+  width: 41px;
+  height: 41px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 8px;
+  transition: all 0.5s;
+}
+
+.btn-search:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.back {
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 7px 10px;
+  margin-right: 7px;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+}
+
+.back:hover {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.table-box {
+  margin-top: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  overflow: auto;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+table tr td {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+table tr:first-child td,
+table tr:last-child td {
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+table tr:first-child td {
+  font-size: 18px;
+  letter-spacing: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+.tNomor {
+  text-align: center;
+  width: 4%;
+}
+
+.tNama {
+  text-align: center;
+  width: 10%;
+}
+
+.tGenre {
+  text-align: center;
+  width: 10%;
+}
+
+.tDeskripsi {
+  padding: 0 30px 0 10px;
+  text-align: justify;
+  width: 40%;
+}
+
+.tGambar {
+  padding-top: 10px;
+  padding-bottom: 6px;
+  width: 15%;
+}
+
+.gambar-cover {
+  border-radius: 12px;
+}
+
+.tWaktu {
+  padding: 5px 20px;
+  text-align: center;
+  width: 14%;
+}
+
+.tActionHead {
+  font-size: 18px;
+  text-align: center;
+}
+
+.tAction {
+  font-size: 30px;
+  text-align: center;
+}
+
+.tombol {
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.5s;
+}
+
+.tombol a {
+  padding: 11px 45.38%;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.tombol:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background: rgb(0, 200, 0);
+}
+
+.kuning {
+  border-radius: 10px;
+  padding: 0 5px;
+  color: #ff9900;
+  transition: all 0.5s;
+}
+
+.merah {
+  border-radius: 10px;
+  padding: 0 5px;
+  color: #ff0000;
+  transition: all 0.5s;
+}
+
+.kuning:hover,
+.merah:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (min-width: 1920px){
+  .head h2 {
+    font-size: 45px;
+  }
+
+  .search {
+    font-size: 32px;
+  }
+
+  .search input[type="search"] {
+    font-size: 24px;
+    width: 600px;
+  }
+
+  .back {
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  .table-box {
+    border-radius: 15px;
+  }
+
+  table {
+    font-size: 22px;
+  }
+
+  table tr:first-child td,
+  table tr:last-child td {
+    padding: 15px 0;
+  }
+
+  table tr:first-child td {
+    font-size: 24px;
+  }
+
+  .tDeskripsi {
+    padding: 0 40px 0 10px;
+  }
+
+  .tGambar {
+    padding-top: 16px;
+    padding-bottom: 10px;
+  }
+
+  .gambar-cover {
+    border-radius: 18px;
+  }
+
+  .tombol a {
+    font-size: 24px;
+    padding: 17px 45.14%;
+  }
+
+  .kuning,
+  .merah {
+    font-size: 52px;
+  }
+}

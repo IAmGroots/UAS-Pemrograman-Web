@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.bg {
+  width: 100%;
+  border: 1px solid black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url(images/bg1.jpg);
+  background-size: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+form {
+  width: 500px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.inputBox label {
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+
+.inputBox input {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 2px 15px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  margin-top: 3px;
+}
+
+input[type="file"] {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 2px 15px;
+  border-radius: 7px;
+  border: none;
+  margin-top: 3px;
+  color: #999999;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+  color: #999999;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: #999999;
+}
+
+textarea {
+  resize: none;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  height: 200px;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+}
+
+form input[type="submit"] {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  padding: 3px 0;
+  border-radius: 7px;
+  transition: all 0.5s;
+}
+
+form input[type="submit"]:hover {
+  color: #e7e7e7;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+form a {
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 7px;
+  padding: 3px 7px;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+}
+
+form a:hover {
+  color: #ffffff;
+  opacity: 0.8;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (min-width: 1920px){
+  form {
+    width: 650px;
+  }
+  
+  h3 {
+    font-size: 36px;
+  }
+
+  .inputBox label {
+    font-size: 24px;
+  }
+
+  .inputBox input {
+    font-size: 20px;
+  }
+
+  input[type="file"] {
+    font-size: 20px;
+  }
+
+  textarea {
+    font-size: 20px;
+    height: 300px;
+  }
+
+  form input[type="submit"] {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  form a {
+    font-size: 18px;
+  }
+}
